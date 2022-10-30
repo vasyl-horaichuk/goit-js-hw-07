@@ -19,7 +19,18 @@ const itemMarkup = galleryItems.map(({ preview, original, description }) =>
 
 galleryListByClassName.innerHTML += itemMarkup;
 
+const onShowBigImage = event => { 
+    event.preventDefault()
+    
+    if (event.target.nodeName !== "IMG") {
+        return;
+    }
+    
+}
+
+galleryListByClassName.addEventListener('click', onShowBigImage)
 console.log(galleryListByClassName);
+
 
 
 
