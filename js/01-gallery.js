@@ -1,7 +1,7 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-const galleryListByClassName = document.querySelector('.gallery');
+const galleryListByClassName = document.querySelector('.gallery')
 
 const itemMarkup = galleryItems.map(({ preview, original, description }) =>
     `<div class="gallery__item">
