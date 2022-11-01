@@ -35,6 +35,7 @@ const onShowBigImage = event => {
   galleryListByClassName.addEventListener('keydown', event => { 
     if (event.key === 'Escape') {
       modal.close()
+        galleryListByClassName.removeEventListener('keydown', ());
     }
   })
 }
