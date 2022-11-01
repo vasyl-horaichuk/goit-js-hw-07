@@ -31,14 +31,23 @@ const onShowBigImage = event => {
 `)
   
   modal.show()
-  
-  galleryListByClassName.addEventListener('keydown', event => { 
-    if (event.key === 'Escape') {
-      modal.close()
-       сonsole.log(galleryListByClassName.removeEventListener('keydown', ())); 
-        
+
+ if (modal.visible()) {
+    window.addEventListener("keydown", onPressKeyESC);
+  }
+
+  const onPressKeyESC = (e) => {
+    if (e.code === "Escape") {
+      modal.close();
+      window.removeEventListener("keydown", onPressKeyESC);
     }
-  })
+  
+//   galleryListByClassName.addEventListener('keydown', event => { 
+//     if (event.key === 'Escape') {
+//       modal.close()
+//       galleryListByClassName.removeEventListener('keydown', ());
+//     }
+//   })
 }
 
 galleryListByClassName.addEventListener('click', onShowBigImage)
