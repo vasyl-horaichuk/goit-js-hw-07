@@ -32,15 +32,16 @@ const onShowBigImage = event => {
   
   modal.show()
 
- if (modal.visible()) {
-    window.addEventListener("keydown", onPressKeyESC);
-  }
+// //  if (modal.visible()) {
+// //     window.addEventListener("keydown", onPressKeyESC);
+// //   }
 
-  const onPressKeyESC = (e) => {
-    if (e.code === "Escape") {
-      modal.close();
-      window.removeEventListener("keydown", onPressKeyESC);
-    }
+// //   const onPressKeyESC = (e) => {
+// //     if (e.code === "Escape") {
+// //       modal.close();
+// //       window.removeEventListener("keydown", onPressKeyESC);
+// //     }
+//     }
   
 //   galleryListByClassName.addEventListener('keydown', event => { 
 //     if (event.key === 'Escape') {
